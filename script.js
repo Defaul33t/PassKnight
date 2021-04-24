@@ -5,7 +5,7 @@ const $ = (selector) => {
 
 const _ = (selector) => {
     return document.createElement(selector);
-}
+};
 
 // Sections
 const sectionOne = $(".section-one");
@@ -69,7 +69,7 @@ if(screen.width < 720 || screen.height < 720){
     $('.landscape').remove();
     $('.small-device').remove();
 
-};
+}
 
 /* FUNCTIONS */
 
@@ -138,7 +138,7 @@ if(screen.width < 720 || screen.height < 720){
         </g>
         </svg>`;
         sectionOne.appendChild(spider);
-    };
+    }
 })();
 
 function animate(knightHead, virus, imitation){
@@ -178,11 +178,11 @@ function writeMessage(result){
     const msg_six = {
         dom: $(".rbox"),
         text: ` "Oh no! Scammer approaches! Use what you learnt!" `
-    }
+    };
     const msg_seven = {
         dom: $(".rbox"),
         text: ` "This is not the end! You will remember about me when you will use simple passwords again!" `
-    }
+    };
 
     switch (result) {
         case 1:
@@ -212,7 +212,7 @@ function writeMessage(result){
         case 7:
             consequence = msg_seven;
             break;
-    };
+    }
 
     const int = setInterval(() => {
 
@@ -241,15 +241,15 @@ function writeMessage(result){
             }else{
                 button.innerText = 'Continue';
                 button.classList.add("btnThree");
-            };
+            }
 
             consequence.dom.appendChild(button);
             clearInterval(int);
             index = 0;
-        };
+        }
 
     }, 35);
-};
+}
 
 function ultimate(){
 
@@ -279,7 +279,7 @@ function ultimate(){
 
                 if(passValue.length >= 13 && hasNumber.test(passValue) && specialChar.test(passValue) && bigChar.test(passValue) && lowChar.test(passValue)){        
                     
-                    score++
+                    score++;
                     passScore.innerText = score;
 
                     if(score === 2){
@@ -305,21 +305,21 @@ function ultimate(){
                             circles[5].style.backgroundColor = "black";
 
                         }, 8000);
-                    };
+                    }
 
                     ultimateInput.value = "";
 
                 }else{
                     ultimateInput.value = "";
-                };
+                }
             
             });
            
         });
-    };
+    }
 
     ultimateFired = true;
-};
+}
 
 function explanationWin(){
 
@@ -336,7 +336,7 @@ function explanationWin(){
         writeMessage(1);
     }, 500);
 
-};
+}
 
 function explanationLose(){
 
@@ -358,11 +358,11 @@ function explanationLose(){
         writeMessage(2);
     }, 500);
 
-};
+}
 
 /* EVENT LISTENERS */
 
-infoBtn.addEventListener("click", (e) => {
+infoBtn.addEventListener("click", () => {
 
     if(!infoPage.classList.contains("active")){
         infoPage.style.display = "flex";
@@ -393,7 +393,7 @@ sectionOne.addEventListener('mouseover' || 'click', (e) => {
     if(e.target == continueBtn){
         $(".eye").classList.add("wink");
         eye.addEventListener("animationend", () => eye.classList.remove("wink") );
-    };
+    }
 });
 
 sectionTwo.addEventListener('click', (e) => {
@@ -437,7 +437,7 @@ sectionTwo.addEventListener('click', (e) => {
                 explanationWin();
             }else{
                 explanationLose();
-            };
+            }
             break;
 
         default:
@@ -455,7 +455,7 @@ sectionTwo.addEventListener('click', (e) => {
             // Normal eyes of virus
             virus.src = 'imgs/virus-red.png';
             break;
-    };
+    }
 
 });
 
@@ -466,7 +466,7 @@ sectionThree.addEventListener("click", (e) => {
             sectionThree.children[0].children[0].remove();
         }
         $(".explanation").style.display = "block";
-    };
+    }
 
     // To section 4
     if(e.target.classList.contains("btnFour")){
@@ -477,7 +477,7 @@ sectionThree.addEventListener("click", (e) => {
         $('header').style.backgroundColor = 'white';
         $('header').style.display = "flex";
         writeMessage(3);
-    };
+    }
     
 });
 
@@ -490,7 +490,7 @@ sectionFour.addEventListener("click", (e) => {
         setTimeout(() => {
             knightRight.style.display = "none";
         }, 1000);
-    };
+    }
 
     if(e.target.classList.contains("weapons")){
         if(health < 30){
@@ -499,9 +499,9 @@ sectionFour.addEventListener("click", (e) => {
             ultimate();
         }else{
             health = health - power;
-            $(".health").style.width = `${health}%`
-        };
-    };
+            $(".health").style.width = `${health}%`;
+        }
+    }
 
 });
 
@@ -536,11 +536,11 @@ function animateMovement(mvOne, mvTwo, stl){
             doneTwo = false;
             done = true;
         }, 125);
-        document.addEventListener("keyup", (e) => {
+        document.addEventListener("keyup", () => {
             clearInterval(backL);
             player.src = stl;
         });
-    };
+    }
 
     if(!doneTwo){
         const backR = setTimeout(() => {
@@ -548,13 +548,13 @@ function animateMovement(mvOne, mvTwo, stl){
             done = false;
             doneTwo = true;
         }, 125);
-        document.addEventListener("keyup", (e) => {
+        document.addEventListener("keyup", () => {
             clearInterval(backR);
             player.src = stl;
         });
-    };
+    }
     
-};
+}
 
 function setPlayer(valueX, valueY, left, bottom){
 
@@ -562,14 +562,14 @@ function setPlayer(valueX, valueY, left, bottom){
     y = valueY;
     player.style.left = left;
     player.style.bottom = bottom;
-};
+}
 
 function removeAnswer(){
 
     playground.classList.remove("correct");
     answer.style.zIndex = "-2";
     answer.innerText = "";
-};
+}
 
 function correctDoor(stage){
 
@@ -602,7 +602,7 @@ function correctDoor(stage){
                 // Remove old doors
                 for(let i = 0; i < 3; i++){
                     playground.children[0].remove();
-                };
+                }
 
                 // Create shield in the middle of the map
                 let shield = _("div");
@@ -618,7 +618,7 @@ function correctDoor(stage){
                     door.classList.add(`door-${doorArr[i]}`);
                     door.innerText = `${doorText[i]}`;
                     playground.appendChild(door);
-                };
+                }
 
                 // Display back the knight for message
                 knightRight.style.display = "block";
@@ -649,7 +649,7 @@ function correctDoor(stage){
                 // Remove old doors
                 for(let i = 0; i < 3; i++){
                     playground.lastChild.remove();
-                };
+                }
 
                 // If shield was not taken remove it also
                 if(!shieldObtained){
@@ -671,7 +671,7 @@ function correctDoor(stage){
                     door.classList.add(`door-${doorArr[i]}`);
                     door.innerText = `${doorText[i]}`;
                     playground.appendChild(door);
-                };
+                }
 
                 // Display back the knight for message
                 knightRight.style.display = "block";
@@ -710,20 +710,20 @@ function correctDoor(stage){
 
                 let fists = _("img");
                 fists.setAttribute("class", "weapon");
-                fists.src = "imgs/fists.png"
+                fists.src = "imgs/fists.png";
 
                 if(domObtainedSword){
                     weapons.append(domSword);
                     power += 5;
-                };
+                }
                 if(domObtainedShield){
                     weapons.append(domShield);
                     power += 5;
-                };
+                }
                 if(!domObtainedShield && !domObtainedSword){ 
                     weapons.append(fists);
                     power += 2;
-                };
+                }
                 
                 // Display back the knight for message
                 knightRight.style.display = "block";
@@ -737,9 +737,9 @@ function correctDoor(stage){
 
             }, 3000);
             break;
-    };
+    }
   
-};
+}
 
 function wrongDoor(){
     playground.classList.add("shakeGround");
@@ -752,7 +752,7 @@ function wrongDoor(){
         answer.style.zIndex = "-2";
         answer.innerText = "";
     }, 500);
-};
+}
 
 function detect(){
 
@@ -767,19 +767,19 @@ function detect(){
     // Correct door 3
     if( ( (x > 640) && (y < 280) && (y > 180) ) && ( (stgCompleteOne) && (stgCompleteTwo) && (!stgCompleteThree) ) ){
         correctDoor(3);
-    };
+    }
     // Wrong door 1st stage
     if( ( ( (x > 20) && (x < 140) && (y > 360) ) || (x > 500) && (x < 620) && (y > 360) ) && (!stgCompleteOne) ){
         wrongDoor();
-    };
+    }
     // Wrong door 2nd stage
     if( ( ( (x > 170) && (x < 280) && (y > 360) ) || ( (x > 640) && (y < 310) && (y > 190) ) ) && (!stgCompleteTwo) && (stgCompleteOne) ){
         wrongDoor();
-    };
+    }
     // Wrong door 3rd stage
     if( ( (x < 500) && (x > 360) && (y > 370) ) && ( (stgCompleteOne) && (stgCompleteTwo) ) ){
         wrongDoor();
-    };
+    }
     // Pick up shield in 2nd stage
     if( ( (x > 300) && (x < 390) && (y > 120) && (y < 200) ) && (stgCompleteOne) && (!shieldObtained) ){
         shieldObtained = true;
@@ -791,9 +791,9 @@ function detect(){
         swordObtained = true;
         domObtainedSword = true;
         $(".sword").remove();
-    };
+    }
 
-};
+}
 
 /* MOVEMENT */
 
@@ -809,7 +809,7 @@ document.addEventListener("keydown", (e) => {
             y+=30;
             player.style.bottom = `${y}px`;
             animateMovement('imgs/character/back-move-one.png', 'imgs/character/back-move-two.png', 'imgs/character/back-still.png');
-        };
+        }
         if(e.key == 'ArrowDown'){
             if(y < 10){
                 y = 20;
@@ -817,7 +817,7 @@ document.addEventListener("keydown", (e) => {
             y-=30;
             player.style.bottom = `${y}px`;
             animateMovement('imgs/character/front-move-one.png', 'imgs/character/front-move-two.png', 'imgs/character/front-still.png');
-        };
+        }
         if(e.key == 'ArrowRight'){
             x+=30;
             if(x > 660){
@@ -825,7 +825,7 @@ document.addEventListener("keydown", (e) => {
             }
             player.style.left = `${x}px`;
             animateMovement('imgs/character/right-move-one.png', 'imgs/character/right-move-two.png', 'imgs/character/right-still.png');
-        };
+        }
         if(e.key == 'ArrowLeft'){
             if(x < 20){
                 x = 20;
@@ -833,9 +833,9 @@ document.addEventListener("keydown", (e) => {
             x-=30;
             player.style.left = `${x}px`;
             animateMovement('imgs/character/left-move-one.png', 'imgs/character/left-move-two.png', 'imgs/character/left-still.png');
-        };
+        }
 
-    };
+    }
 
     detect();
 
@@ -855,7 +855,7 @@ document.addEventListener("click", (e) => {
             y+=30;
             player.style.bottom = `${y}px`;
             animateMovement('imgs/character/back-move-one.png', 'imgs/character/back-move-two.png', 'imgs/character/back-still.png');
-        };
+        }
         if(e.target.classList.contains("down")){
             if(y < 10){
                 y = 20;
@@ -863,7 +863,7 @@ document.addEventListener("click", (e) => {
             y-=30;
             player.style.bottom = `${y}px`;
             animateMovement('imgs/character/front-move-one.png', 'imgs/character/front-move-two.png', 'imgs/character/front-still.png');
-        };
+        }
         if(e.target.classList.contains("right")){
             x+=30;
             if(x > 660){
@@ -871,7 +871,7 @@ document.addEventListener("click", (e) => {
             }
             player.style.left = `${x}px`;
             animateMovement('imgs/character/right-move-one.png', 'imgs/character/right-move-two.png', 'imgs/character/right-still.png');
-        };
+        }
         if(e.target.classList.contains("left")){
             if(x < 20){
                 x = 20;
@@ -879,9 +879,9 @@ document.addEventListener("click", (e) => {
             x-=30;
             player.style.left = `${x}px`;
             animateMovement('imgs/character/left-move-one.png', 'imgs/character/left-move-two.png', 'imgs/character/left-still.png');
-        };
+        }
 
-    };
+    }
 
     detect();
 
