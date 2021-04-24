@@ -406,7 +406,7 @@ sectionTwo.addEventListener('click', (e) => {
             // To section 3 
             sectionTwo.remove();
 
-            if(inputLogin.value.length < 5 && inputPass.value.length < 1){
+            if(inputPass.value.length < 8){
                 explanationWin();
             }else{
                 explanationLose();
