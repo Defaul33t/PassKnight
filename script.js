@@ -1,11 +1,3 @@
-// Check device viewport
-if(screen.width < 768){
-    alert("Mobile devices are not optimized for PassKnight :(");
-    location.reload();
-}else if(screen.availHeight > screen.availWidth){
-    alert("It's recommended to use landscape mode on tablet devices");
-};
-
 // Selector variable
 const $ = (selector) => {
     return document.querySelector(selector);
@@ -45,6 +37,15 @@ const ultimateInput = $("#ultimate-pass");
 const ultimateSubmit = $("#ultimate-btn");
 
 /* FUNCTIONS */
+
+// Check device viewport
+if(screen.width < 768){
+    $('.small-device').style.display = "flex";
+    alert("Mobile devices are not optimized for PassKnight :(");
+    location.reload();
+}else if(screen.availHeight > screen.availWidth){
+    alert("It's recommended to use landscape mode on tablet devices");
+};
 
 (function startUp(){
     circles[0].style.backgroundColor = "black";

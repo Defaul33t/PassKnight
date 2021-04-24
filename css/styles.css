@@ -63,6 +63,22 @@ header h2 {
 .information-site p {
     font-size: 18px;
 }
+.small-device {
+    font-family: 'Montserrat';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    z-index: 1000;
+}
 
 /* Navigation dots */
 
