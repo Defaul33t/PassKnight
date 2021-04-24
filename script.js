@@ -36,16 +36,42 @@ const nav = $('nav');
 const ultimateInput = $("#ultimate-pass");
 const ultimateSubmit = $("#ultimate-btn");
 
-/* FUNCTIONS */
-
 // Check device viewport
-if(screen.width < 768){
+if(screen.width < 720 || screen.height < 720){
+
+    // Phone incompatible
+
     $('.small-device').style.display = "flex";
-    alert("Mobile devices are not optimized for PassKnight :(");
-    location.reload();
+
+    setTimeout(() => {
+        location.reload();
+    }, 10000);
+
 }else if(screen.availHeight > screen.availWidth){
-    alert("It's recommended to use landscape mode on tablet devices");
+
+    // Tablet devices should use landscape
+
+    $('.landscape').style.display = "flex";
+
+    setTimeout(() => {
+        $('.landscape').style.opacity = 0;
+
+        $('.landscape').addEventListener('transitionend', () => {
+            $('.landscape').remove();
+            $('.small-device').remove();
+        });
+    }, 1500);
+
+}else{
+
+    // Remove start messages
+    
+    $('.landscape').remove();
+    $('.small-device').remove();
+
 };
+
+/* FUNCTIONS */
 
 (function startUp(){
     circles[0].style.backgroundColor = "black";
@@ -860,17 +886,3 @@ document.addEventListener("click", (e) => {
     detect();
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
