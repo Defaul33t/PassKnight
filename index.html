@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassKnight</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/5de230ab31.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <header>
+        <h2>PassKnight</h2>
+        <img class="info" src="imgs/info.svg" alt="info-icon">
+    </header>
+    <nav>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </nav>
+    <main>
+        <section class="section-one">
+            <div class="intro">
+                <p>
+                    “My name is PassKnight and I represent your 
+                    digital accounts on websites”
+                </p>
+                <p class="bolder-text">
+                    Passwords are stolen on daily basis and
+                    databases are not invincible.
+                    <br>BUT YOU CAN BE!
+                </p>
+                <button id="start-button">Continue</button>
+            </div>
+            <div class="knight-box">
+                <img src="imgs/body.png" alt="knights body" class="body">
+                <img src="imgs/eye.png" alt="knights eye" class="eye">
+            </div>
+        </section>
+        <section class="section-two">
+            <!-- Google form -->
+            <div class="google-form">
+
+                <!-- Wrapper of both forms -->
+                <div class="two-forms">
+                    <!-- First form -->
+                    <div class="inner">
+                        <img src="imgs/google.png" alt="google logo" class="google-logo">
+                        <div class="sign-in">
+                            <h3>Sign in</h3>
+                            <h4>to continue to Gmail</h4>
+                        </div>
+                        <div class="form-input">
+                            <div class="text-imitation">Email or Phone</div>
+                            <input type="text" name="email" id="login-input">
+                            <a href="#"><span>Forgot email?</span></a> 
+                        </div>
+                        <div class="learn-more">
+                            <p>Not your computer? Use a Private Window to sign in.</p>
+                            <a href="#"><span>Learn more</span></a>
+                        </div>
+                        <div class="next">
+                            <a href="#"><span>Create account</span></a>
+                            <button id="next-btn">Next</button>
+                        </div>
+                    </div>
+                    <!-- Second form -->
+                    <div class="inner pass-form">
+                        <img src="imgs/google.png" alt="google logo" class="google-logo">
+                        <div class="user-display">
+                            <h3 class="name-target">Name</h3>
+                        </div>
+                        <div class="form-input">
+                            <p class="verify">To continue, first verify it’s you</p>
+                            <div class="text-imitation pass-imitation">Enter you password</div>
+                            <input type="password" name="email" id="password-input">
+                            <input type="checkbox" id="show-password" name="show-password" value="Show password">
+                            <label for="show-password">Show password</label><br>
+                        </div>
+                        <div class="next">
+                            <a href="#"><span>Forgot password</span></a>
+                            <button id="confirm-button">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Outer form -->
+                <div class="outer-form">
+                    <p>English (United States)</p>
+                    <div>
+                        <ul>
+                            <li class="skip">Skip</li>
+                            <li>Privacy</li>
+                            <li>Terms</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="taped-knight">
+                <img src="imgs/taped-body.png" alt="taped body" class="taped-body">
+                <img src="imgs/taped-head.png" alt="taped body" class="taped-head">
+            </div>
+            <div class="virus">
+                <img src="imgs/virus-red.png" alt="virus" class="virus-happy">
+            </div>
+        </section>
+        <section class="section-three">
+            <div class="ending won">
+                <h2>Correct</h2>
+                <img src="imgs/knight-blue-smile.png" alt="knight blue" class="normal-knight">
+                <div class="message-box"></div>
+                <img src="imgs/emoji.png" alt="fingers" class="fingers">
+                <img src="imgs/confetti.png" alt="confetti picture" class="confetti">
+                <div class="explanation">
+                    <p>If the website looks suspicious or is not verified, don’t type in your login details. Scammers try to steal people’s passwords with fake forms. Great example would be fake emails with links to fake big corp websites.</p>
+                    <p style="color: #C92222">Imagine you use same password for all social media accounts. <br> <span>&#129488;</span></p>
+                    <button class="btnFour">Got it</button>
+                </div>
+            </div>
+            <div class="ending lost">
+                <h2>Wrong!</h2>
+                <img src="imgs/knight-blue-hit.png" alt="knight blue" class="normal-knight">
+                <div class="message-box"></div>
+                <div class="emoji">
+                    <img src="imgs/sad.svg" alt="emoji sad" class="emoji-head">
+                    <img src="imgs/drop.svg" alt="drop" class="emoji-drop">
+                </div>
+                <div class="explanation">
+                    <p>In real life situation your login details would be mine already... If the website looks suspicious or is not verified, don’t type in your login details. Scammers try to steal people’s passwords with fake forms. Great example would be fake emails with links to fake big corp websites.</p>
+                    <p style="color: #C92222">Imagine you use same password for all social media accounts. <br> <span>&#128552;</span></p>
+                    <button class="btnFour">Got it</button>
+                </div>
+            </div>
+        </section>
+        <section class="section-four">
+            <div class="playground">
+                <div class="door door-one">
+                    At least 6 characters
+                </div>
+                <div class="door door-two">
+                    At least 10 characters
+                </div>
+                <div class="door door-three">
+                    At least 13 characters
+                </div>
+                <div class="text-answer">
+
+                </div>
+                <img src="imgs/character/front-still.png" alt="character" id="player">
+            </div>
+            <div class="knight-right-box">
+                <img src="imgs/knight-right.png" alt="knight talking" class="knight-right">
+                <div class="message-box rbox"></div>
+            </div>
+            <div class="tablet-controls">
+                <div class="left"><i class="fas fa-chevron-left"></i></div>
+                <div class="up"><i class="fas fa-chevron-up"></i></div>
+                <div class="down"><i class="fas fa-chevron-down"></i></div>
+                <div class="right"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="final-stage">
+                <div class="player-box">
+                    <div class="message-box ultimate-box">
+                        <h3>Write 2 examples of strong password <br> <span id="kill-score">0</span></h3>
+                        <input type="text" name="password" id="ultimate-pass">
+                        <button id="ultimate-btn">use</button>
+                    </div>
+                    <img src="imgs/character/front-still.png" alt="character" class="player-final">
+                    <div class="attack">
+                        <p>click to deal damage !</p>
+                        <div class="weapons"></div>
+                    </div>
+                </div>
+                <div class="scammer-box">
+                    <img src="imgs/virus-eyes.png" alt="scammer" class="scammer">
+                    <div class="healthbar">
+                        <div class="health"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="win">
+            <div class="information">
+                <div class="congratulations">
+                    <h2><b>Congratulations!</b><br>
+                    You completed this short game about secure passwords.</h2>
+                </div>
+                <div class="essentials">
+                    <h3>Essentials of passwords:</h3>
+                    <ul>
+                        <li>At least 16 characters.</li>
+                        <li>Mix of all 4 character types (a, A, #, 4).</li>
+                        <li>Rememberable but without personal information.</li>
+                        <li>Don’t share your password with anyone.</li>
+                        <li>Don’t reuse your password.</li>
+                    </ul>
+                </div>
+                <div class="fact">
+                    <p>Passwords are so easy to crack by super computers nowadays, that’s why it is recommended to use
+                        passwords like above mentioned. Did you know that simple password as ‘picture1’ would be cracked
+                        in just 3 hours? Or password ‘password’ in 0.19 milliseconds! Computers use algorithms to guess our 
+                        passwords, they also use dictionaries and they try to predict our thinking.</p>
+                </div>
+                <div class="sources">
+                    <a href="https://www.security.org/how-secure-is-my-password/">https://www.security.org/how-secure-is-my-password/</a> <br>
+                    <a href="https://sandstormit.com/what-makes-a-strong-password/">https://sandstormit.com/what-makes-a-strong-password/</a> <br>
+                    <a href="https://castlecrashers.fandom.com/wiki/Category:Characters">https://castlecrashers.fandom.com/wiki/Category:Characters</a> <br>
+                    <a href="https://forums.rpgmakerweb.com/index.php?threads/ayenes-tiles.27710/">https://forums.rpgmakerweb.com/index.php?threads/ayenes-tiles.27710/</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="information-site">
+        <div>
+            <h3>Important information</h3>
+            <p>
+                All information written in the forms is not stored anywhere. <br>
+                Passknight was purely made for educational purposes respectively school project. 
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

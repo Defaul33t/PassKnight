@@ -1,0 +1,181 @@
+.wink {
+    animation: wink 0.5s linear;
+}
+@keyframes wink {
+    from{
+        transform: rotateX(0);
+    }to{
+        transform: rotateX(180deg);
+    }
+}
+/* Spider Legs */
+#leg-left {
+    animation: left 0.4s linear infinite alternate;
+    transform-origin: right;
+    transform-box: fill-box;
+}
+#leg-right {
+    animation: right 0.4s linear infinite alternate;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+#leg-right-front {
+    animation: frontR 0.4s linear infinite alternate;
+    transform-origin: left;
+    transform-box: fill-box;
+}
+#leg-left-front {
+    animation: frontL 0.4s linear infinite alternate;
+    transform-origin: right;
+    transform-box: fill-box;
+}
+@keyframes left{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(20deg);
+    }
+}
+@keyframes right{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(-20deg);
+    }
+}
+@keyframes frontR{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(20deg);
+    }
+}
+@keyframes frontL{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(20deg);
+    }
+}
+/* Spider movement */
+.spider {
+    position: absolute; 
+    z-index: -1;
+}
+.bobby {
+    width: 85px;
+    left: 50px;
+    animation: spiderWalkB 10s ease-in-out infinite;
+}
+.cucco {
+    width: 80px;
+    right: 50px;
+    animation: spiderWalkC 10s ease-in-out infinite;
+}
+.duck {
+    width: 100px;
+    right: 300px;
+    bottom: 100px;
+    animation: spiderWalkD 15s ease-in-out infinite;
+}
+@keyframes spiderWalkB {
+    0% {transform: translate(0, 0) rotateZ(0);}
+    10% {transform: translate(0, -200px);}
+    15% {transform: translate(0, -200px) rotateZ(90deg);}
+    40% {transform: translate(200px, -200px) rotateZ(90deg);}
+    45% {transform: translate(200px, -200px) rotateZ(135deg);}
+    70% {transform: translate(500px, 200px) rotateZ(135deg);}
+    75% {transform: translate(500px, 200px) rotateZ(270deg);}
+    90% {transform: translate(200px, 200px) rotateZ(270deg);}
+    100% {transform: translate(0, 0) rotateZ(360deg);}
+}
+@keyframes spiderWalkC {
+    0% {transform: translate(0, 0) rotateZ(0);}
+    20% {transform: translate(0, -50px) rotateZ(0);}
+    40% {transform: translate(0, -50px) rotateZ(90deg);}
+    60% {transform: translate(150px, -50px) rotateZ(90deg);}
+    80% {transform: translate(150px, -50px) rotateZ(180deg);}
+    90% {transform: translate(50px, 0px) rotateZ(270deg);}
+    100% {transform: translate(0, 0) rotateZ(360deg);}
+}
+@keyframes spiderWalkD {
+    0% {transform: translate(0, 0) rotateZ(0);}
+    14% {transform: translate(-50px, -50px) rotateZ(-45deg);}
+    28% {transform: translate(-200px, -200px) rotateZ(-45deg);}
+    42% {transform: translate(-200px, -200px) rotateZ(-135deg);}
+    56% {transform: translate(-200px, 0px) rotateZ(-180deg);}
+    70% {transform: translate(-200px, 0px) rotateZ(-270deg);}
+    84% {transform: translate(0px, 0px) rotateZ(-270deg);}
+    100% {transform: translate(0px, 0px) rotateZ(-360deg);}
+}
+.disagree{
+    animation: rotateHead 1.5s linear;
+}
+@keyframes rotateHead {
+    0%{transform: rotateZ(0deg);}
+    25%{transform: rotateZ(5deg);}
+    50%{transform: rotateZ(0deg);}
+    75%{transform: rotateZ(-5deg);}
+    100%{transform: rotateZ(0deg);}
+}
+.rotateNav{
+    transform: translate(120px, -47.5vh) rotate(90deg);
+    bottom: 0;
+}
+.fingers {
+    width: 350px;
+    position: absolute;
+    bottom: -50px;
+    right: calc(-600px + 35vw + 20vh);
+    animation: happyFingers 3s linear infinite;
+    transform-origin: bottom;
+}
+@keyframes happyFingers {
+    0% {transform: rotateZ(0);}
+    25% {transform: rotateZ(-20deg);}
+    50% {transform: rotateZ(0deg);}
+    75% {transform: rotateZ(20deg);}
+    100% {transform: rotateZ(0deg);}
+}
+.animate-drop {
+    animation: drop 5s linear infinite;
+}
+@keyframes drop {
+    0% {transform: scale(0.2);}
+    50% {transform: scale(1);}
+    100% {transform: scale(1) translateY(100vh);}
+}
+.shakeGround {
+    animation: shake 0.5s linear;
+}
+@keyframes shake {
+    0% {transform: rotateZ(0);}
+    10% {transform: rotateZ(10deg);}
+    20% {transform: rotateZ(00deg);}
+    30% {transform: rotateZ(-10deg);}
+    40% {transform: rotateZ(0deg);}
+    50% {transform: rotateZ(10deg);}
+    60% {transform: rotateZ(0deg);}
+    70% {transform: rotateZ(-10deg);}
+    80% {transform: rotateZ(0deg);}
+    90% {transform: rotateZ(10deg);}
+    100% {transform: rotateZ(0deg);}
+}
+.correct {
+    animation: correct 3s ease-in-out;
+}
+@keyframes correct {
+    0% {transform: translateY(0%);}
+    20% {transform: translateY(-50%);}
+    30% {transform: translateY(0);}
+    40% {transform: translateY(-30%);}
+    50% {transform: translateY(-0%);}
+    60% {transform: translateY(-20%);}
+    70% {transform: translateY(-0%);}
+    80% {transform: translateY(-10%);}
+    100% {transform: translateY(0%);}
+}
