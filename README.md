@@ -1,3 +1,3 @@
 # PassKnight
-School project
+School project 2nd semester
 #24.4
