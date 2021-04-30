@@ -277,7 +277,7 @@ function ultimate(){
 
                 let passValue = ultimateInput.value;
 
-                if(passValue.length >= 13 && hasNumber.test(passValue) && specialChar.test(passValue) && bigChar.test(passValue) && lowChar.test(passValue)){        
+                if(passValue.length >= 12 && hasNumber.test(passValue) && specialChar.test(passValue) && bigChar.test(passValue) && lowChar.test(passValue)){        
                     
                     score++;
                     passScore.innerText = score;
