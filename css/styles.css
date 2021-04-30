@@ -220,6 +220,15 @@ section {
     border-radius: 5px;
     font-family: 'Roboto';
 }
+.load {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 5px;
+    background-color: var(--primary);
+}
 .sign-in {
     text-align: center;
 }

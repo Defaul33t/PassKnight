@@ -23,6 +23,7 @@ const virus = $(".virus-happy");
 const inputLogin = $('#login-input');
 const textLogin = $(".text-imitation");
 const nextBtn = $("#next-btn");
+const load = $('.load');
 // Password input
 const name = $(".name-target");
 const inputPass = $('#password-input');
@@ -35,6 +36,7 @@ const circles = document.querySelectorAll(".circle");
 const nav = $('nav');
 const ultimateInput = $("#ultimate-pass");
 const ultimateSubmit = $("#ultimate-btn");
+let clicked;
 
 // Check device viewport
 if(screen.width < 720 || screen.height < 720){
@@ -408,17 +410,25 @@ sectionTwo.addEventListener('click', (e) => {
             break;   
 
         case nextBtn:
-            // Two second password form
-            $(".two-forms").style.transform = 'translateX(-175px)';
-            // mail with round border and icon
-            let newMail = _('h4');
-            newMail.classList.add('mail-show');
-            newMail.innerHTML = `<div class="login-icon">${inputLogin.value.slice(0, 1)}</div> ${inputLogin.value} <i class="fas fa-chevron-down"></i>`;
-    
-            $(".user-display").appendChild(newMail);
 
-            // Set value for name
-            name.innerHTML = `Hi ${inputLogin.value.slice(0, inputLogin.value.indexOf('@'))}`;
+            // Prevent next click stack
+            if(!clicked){
+                clicked = true;
+                // Two second password form and load animation
+                $(".two-forms").style.transform = 'translateX(-175px)';
+                load.style.display = 'block';
+                load.classList.add('load-animation');
+                load.addEventListener('animationend', () => load.remove());
+                // mail with round border and icon
+                let newMail = _('h4');
+                newMail.classList.add('mail-show');
+                newMail.innerHTML = `<div class="login-icon">${inputLogin.value.slice(0, 1)}</div> ${inputLogin.value} <i class="fas fa-chevron-down"></i>`;
+        
+                $(".user-display").appendChild(newMail);
+
+                // Set value for name
+                name.innerHTML = `Hi ${inputLogin.value.slice(0, inputLogin.value.indexOf('@'))}`;
+            }
             break;   
 
         case skip:
