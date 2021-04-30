@@ -858,7 +858,7 @@ section {
     font-weight: 400;
 }
 .essentials {
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 30px;
 }
 .essentials h3 {
@@ -866,7 +866,7 @@ section {
 }
 .fact {
     font-family: "Roboto";
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 15px;
 }
 .sources {

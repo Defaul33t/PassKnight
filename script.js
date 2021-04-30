@@ -173,7 +173,7 @@ function writeMessage(result){
     };
     const msg_five = {
         dom: $(".rbox"),
-        text: ` "Should you use personal information in your password?" `
+        text: ` "Should you use personal information or dictionary words in your password?" `
     };
     const msg_six = {
         dom: $(".rbox"),
